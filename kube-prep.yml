@@ -1,0 +1,12 @@
+---
+- name: Setup Proxy
+  hosts: all 
+  remote_user: root
+  become: yes
+  become_method: sudo
+  #gather_facts: no
+  vars:
+    k8s_cni: calico                                      
+    configure_firewalld: true                            
+  roles:
+    - kubernetes-bootstrap

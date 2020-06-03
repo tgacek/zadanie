@@ -1,0 +1,5 @@
+---
+
+- name: Configure firewalld
+  include: configure_firewalld.yml
+  when: configure_firewalld
